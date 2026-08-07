@@ -82,9 +82,9 @@ h1 strong { color: var(--blue); font-weight: 800; }
 .hero-copy p { margin: 0; color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.16rem); line-height: 1.65; }
 .hero-actions { display: flex; gap: 24px; margin-top: 34px; }
 
-.hero-photo { position: absolute; z-index: 2; right: 0; top: 0; width: 49%; height: 570px; overflow: hidden; }
+.hero-photo { position: absolute; z-index: 2; right: 0; top: 0; width: 62%; height: 570px; overflow: hidden; }
 .hero-photo::before { content: ""; position: absolute; z-index: 2; inset: 0 auto 0 0; width: 30%; background: linear-gradient(90deg, #f7faff 0%, rgba(247,250,255,0) 100%); }
-.hero-photo img { position: absolute; width: 1536px; max-width: none; height: 1024px; left: 50%; top: -118px; transform: translateX(-57%); object-fit: none; }
+.hero-photo img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 62% center; }
 
 .benefits {
   width: min(calc(100% - 8vw), 1400px);
@@ -103,6 +103,47 @@ h1 strong { color: var(--blue); font-weight: 800; }
 .benefit-card > span { display: block; width: 36px; height: 3px; margin: 12px auto 13px; border-radius: 3px; background: var(--blue); }
 .benefit-card p { margin: 0; color: var(--muted); font-size: .96rem; line-height: 1.55; }
 .about { min-height: 180px; display: grid; place-items: center; padding: 60px 24px; text-align: center; font-size: 1.45rem; font-weight: 700; }
+
+.site-footer { min-height: 105px; padding: 28px max(4vw, 24px); display: flex; align-items: center; justify-content: space-between; gap: 24px; color: #d8e8fb; background: #001c3f; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 25px; }
+.site-footer a:hover { color: white; text-decoration: underline; }
+.seminar-hero { min-height: 325px; padding: 50px max(5.5vw, 28px); background: radial-gradient(circle at 82% 42%, rgba(31,123,239,.32), transparent 30%), linear-gradient(115deg, #fff 10%, #edf5ff 58%, #b8d9ff); border-bottom-right-radius: 170px; }
+.seminar-hero > div { max-width: 1400px; margin: auto; }
+.seminar-hero small, .eyebrow { color: var(--blue); font-weight: 800; }
+.seminar-hero h1 { margin-top: 28px; font-size: clamp(2.4rem, 4vw, 3.7rem); }
+.seminar-hero p { max-width: 570px; color: var(--muted); font-size: 1.08rem; line-height: 1.65; }
+.seminar-grid { width: min(calc(100% - 8vw), 1400px); margin: 24px auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.seminar-card { overflow: hidden; border: 1px solid #e4ebf5; border-radius: 15px; background: white; box-shadow: 0 14px 40px rgba(3,30,66,.1); }
+.seminar-card > img { display: block; width: 100%; height: 290px; object-fit: cover; }
+.seminar-content { padding: 28px; }
+.seminar-content h2 { margin: 0 0 7px; font-size: 1.32rem; }
+.seminar-content h3 { margin: 0; color: var(--blue); font-size: .98rem; }
+.seminar-content p { color: var(--muted); line-height: 1.6; }
+.seminar-content dl { border-top: 1px solid #d8dee8; padding-top: 12px; font-size: .91rem; }
+.seminar-content dl div { display: grid; grid-template-columns: 130px 1fr; gap: 10px; padding: 4px 0; }
+.seminar-content dt { color: var(--blue-dark); font-weight: 650; }
+.seminar-content dd { margin: 0; }
+.mini-button { display: inline-flex; margin-top: 8px; padding: 12px 20px; color: white; border-radius: 999px; background: var(--blue); font-weight: 700; font-size: .9rem; }
+.seminar-cta { width: min(calc(100% - 8vw), 1400px); margin: 0 auto 38px; padding: 30px 45px; display: flex; align-items: center; justify-content: space-between; gap: 30px; border-radius: 15px; background: #edf5ff; }
+.seminar-cta p { margin: 7px 0 0; color: var(--muted); }
+.content-page, .legal-page { width: min(calc(100% - 40px), 920px); min-height: calc(100vh - 223px); margin: 0 auto; padding: 80px 0; }
+.content-page h1, .legal-page h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+.lead { max-width: 690px; color: var(--muted); font-size: 1.2rem; line-height: 1.7; }
+.contact-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 45px; }
+.contact-cards a { min-height: 155px; padding: 30px; display: flex; flex-direction: column; justify-content: center; gap: 12px; border: 1px solid var(--line); border-radius: 16px; background: #f6f9fe; }
+.contact-cards strong { color: var(--blue); font-size: 1.25rem; }
+.contact-cards span { word-break: break-word; }
+.legal-page { max-width: 800px; }
+.legal-page h1 { margin-top: 0; }
+.legal-page h2 { margin-top: 35px; font-size: 1.25rem; }
+.legal-page p { color: var(--muted); line-height: 1.7; }
+.legal-page a { color: var(--blue); text-decoration: underline; }
+.legal-note { padding: 18px; border-left: 4px solid var(--blue); background: #f1f6ff; }
+.consent-banner { position: fixed; z-index: 50; right: 22px; bottom: 22px; left: 22px; max-width: 960px; margin: auto; padding: 20px; display: flex; align-items: center; justify-content: space-between; gap: 22px; border-radius: 14px; color: white; background: #061a36; box-shadow: 0 15px 50px rgba(0,0,0,.3); }
+.consent-banner p { margin: 5px 0 0; }
+.consent-actions { display: flex; gap: 10px; }
+.consent-actions button { padding: 11px 17px; border: 1px solid #c8dbf5; border-radius: 999px; color: white; background: transparent; cursor: pointer; }
+.consent-actions .accept { border-color: var(--blue); background: var(--blue); }
 
 @media (max-width: 1050px) {
   .site-header { grid-template-columns: 1fr auto; height: auto; min-height: 104px; padding: 18px 0; }
@@ -132,6 +173,13 @@ h1 strong { color: var(--blue); font-weight: 800; }
   .hero-photo::before { width: 80%; }
   .benefits { width: calc(100% - 36px); grid-template-columns: 1fr; margin-top: -72px; }
   .benefit-card { min-height: auto; }
+  .seminar-hero { border-bottom-right-radius: 80px; }
+  .seminar-grid, .contact-cards { grid-template-columns: 1fr; }
+  .seminar-card > img { height: 210px; }
+  .seminar-content dl div { grid-template-columns: 112px 1fr; }
+  .seminar-cta, .site-footer, .consent-banner { align-items: stretch; flex-direction: column; }
+  .seminar-cta { padding: 26px; }
+  .content-page, .legal-page { padding: 50px 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
