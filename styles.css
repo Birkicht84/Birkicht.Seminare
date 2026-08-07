@@ -109,6 +109,26 @@ h1 strong { color: var(--blue); font-weight: 800; }
 .benefit-card > span { display: block; width: 36px; height: 3px; margin: 12px auto 13px; border-radius: 3px; background: var(--blue); }
 .benefit-card p { margin: 0; color: var(--muted); font-size: .96rem; line-height: 1.55; }
 .about { min-height: 180px; display: grid; place-items: center; padding: 60px 24px; text-align: center; font-size: 1.45rem; font-weight: 700; }
+.about > div { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.about a { color: var(--blue); font-size: 1rem; }
+.about-page { background: linear-gradient(180deg, #f7faff 0, white 42%); }
+.about-intro { width: min(calc(100% - 8vw), 1320px); margin: 0 auto; padding: 65px 0 80px; display: grid; grid-template-columns: minmax(300px, .82fr) 1.18fr; align-items: center; gap: clamp(45px, 7vw, 105px); }
+.about-photo { position: relative; padding: 18px; }
+.about-photo::before { content: ""; position: absolute; inset: 0 14% 8% 0; border-radius: 30px; background: #dcecff; transform: rotate(-3deg); }
+.about-photo img { position: relative; z-index: 1; width: 100%; max-height: 650px; display: block; object-fit: cover; object-position: center 28%; border-radius: 26px; box-shadow: 0 24px 55px rgba(3,30,66,.16); }
+.about-copy h1 { margin: 22px 0 0; font-size: clamp(2.7rem, 4.3vw, 4.5rem); }
+.about-copy p:not(.eyebrow) { color: var(--muted); font-size: 1.06rem; line-height: 1.75; }
+.about-details { width: min(calc(100% - 8vw), 1320px); margin: 0 auto 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.about-details article { padding: 32px; border: 1px solid #e1eaf6; border-radius: 18px; background: white; box-shadow: 0 15px 40px rgba(3,30,66,.07); }
+.about-details article > span { color: var(--blue); font-weight: 800; }
+.about-details h2 { margin: 18px 0 12px; font-size: 1.3rem; }
+.about-details p { margin: 0; color: var(--muted); line-height: 1.65; }
+.about-motivation { padding: 75px max(6vw, 28px); display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(40px, 8vw, 120px); color: white; background: #001c3f; }
+.about-motivation > div { max-width: 650px; }
+.about-motivation .eyebrow { color: #79b5ff; }
+.about-motivation h2 { margin: 18px 0 0; font-size: clamp(2rem, 3vw, 3.2rem); line-height: 1.12; }
+.about-motivation p { color: #d6e2f1; font-size: 1.04rem; line-height: 1.7; }
+.about-motivation .button { margin-top: 15px; }
 
 .site-footer { min-height: 105px; padding: 28px max(4vw, 24px); display: flex; align-items: center; justify-content: space-between; gap: 24px; color: #d8e8fb; background: #001c3f; }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 25px; }
@@ -219,4 +239,13 @@ h1 strong { color: var(--blue); font-weight: 800; }
   .benefit-card > span { width: 28px; height: 2px; margin: 9px auto; }
   .benefit-card p { font-size: .74rem; line-height: 1.35; }
   .about { min-height: 120px; padding: 38px 20px; font-size: 1.05rem; }
+  .about-intro { width: calc(100% - 36px); padding: 32px 0 48px; grid-template-columns: 1fr; gap: 36px; }
+  .about-photo { padding: 10px; }
+  .about-photo img { max-height: 430px; object-position: center 25%; }
+  .about-copy h1 { font-size: 2.45rem; }
+  .about-copy p:not(.eyebrow) { font-size: .98rem; line-height: 1.65; }
+  .about-details { width: calc(100% - 36px); margin-bottom: 50px; grid-template-columns: 1fr; gap: 12px; }
+  .about-details article { padding: 23px; }
+  .about-motivation { padding: 48px 24px; grid-template-columns: 1fr; gap: 25px; }
+  .about-motivation h2 { font-size: 2rem; }
 }
